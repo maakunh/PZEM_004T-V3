@@ -22,7 +22,7 @@ def main():
     print("before: ", cls.alarm)
 
     #change power alert threshold
-    cls.modify_poweralert(1000)
+    cls.modify_poweralert(1000) #change this parameter[W]
     cls.close()
 
     #after connection closed, the rusult is reflected.
