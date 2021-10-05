@@ -1,5 +1,5 @@
 #pzem_004t_functions.py
-#Create: 05/10/2021
+#Create: 10/05/2021
 #Author: Masafumi Hiura
 #URL: https://github.com/maakunh/PZEM_004T-V3
 #This code is the common parameter/function of pzem_004t_xxxxx.py

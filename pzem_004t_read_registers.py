@@ -1,5 +1,5 @@
 #pzem_004t_read_registers.py
-#Create: 05/10/2021
+#Create: 10/05/2021
 #Author: Masafumi Hiura
 #URL: https://github.com/maakunh/PZEM_004T-V3
 
