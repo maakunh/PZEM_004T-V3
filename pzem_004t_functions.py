@@ -111,4 +111,7 @@ class functions:
         self.powerfactor = data[8] / 100.0
         self.alarm = data[9]  # 0 = no alarm
 
-
+    def wait(self, sec=None):
+        print("wait for ", sec, " sec ...")
+        time.sleep(sec)
+        print("done.")

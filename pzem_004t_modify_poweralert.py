@@ -22,11 +22,10 @@ def main():
     print("before: ", cls.alarm)
 
     #change power alert threshold
-    cls.modify_poweralert(1000) #change this parameter[W]
-    cls.close()
+    cls.modify_poweralert(500) #change this parameter[W]
 
-    #after connection closed, the rusult is reflected.
-    cls.conn(port)
+    cls.wait(sec=2)
+
     cls.read_registers()
     print("power: ", cls.power)
     print("after: ", cls.alarm)

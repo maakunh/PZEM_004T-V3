@@ -7,7 +7,6 @@
 # Run as:
 # python3 pzem_004t_reset_energy.py
 
-
 #import original module
 import pzem_004t_functions
 
@@ -23,10 +22,9 @@ def main():
 
     #reset energy
     cls.reset_energy()  #reset energy[wh]
-    cls.close()
 
-    #after connection closed, the rusult is reflected.
-    cls.conn(port)
+    cls.wait(sec=2)
+
     cls.read_registers()
     print("after energy reset: ", cls.energy)
 
