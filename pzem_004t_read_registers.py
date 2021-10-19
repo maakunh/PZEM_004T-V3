@@ -10,11 +10,18 @@
 
 #import original module
 import pzem_004t_functions
+import sys
 
 def main():
+    if (len(sys.argv) < 1):
+        print("Usage: pzem_004t_reset_energy.py <port>")
+        sys.exit(0)
+    else:
+        port = sys.argv[1]  # Windows -> COM*, Linux -> /dev/ttyUSB*, Mac -> /dev/tty.usb*
+
     #Initialize
     cls = pzem_004t_functions.functions()
-    port = "/dev/tty.usbserial-A50285BI"    #change this parameter by your environment
+    #port = "/dev/tty.usbserial-1410"    #change this parameter by your environment
 
     cls.conn(port)
     cls.read_registers()
