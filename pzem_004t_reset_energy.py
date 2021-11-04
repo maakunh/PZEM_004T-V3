@@ -26,16 +26,22 @@ def main():
     #before reset energy
     cls.conn(port)
     cls.read_registers()
-    print("before energy reset: ", cls.energy)
+    before = cls.energy
+    print("before energy reset: ", before)
 
     #reset energy
     cls.reset_energy()  #reset energy[wh]
 
-    cls.wait(sec=2)
-
-    cls.read_registers()
-    print("after energy reset: ", cls.energy)
-
+    retry = True
+    while retry == True:
+        cls.wait(sec=2)
+        cls.read_registers()
+        after = cls.energy
+        print("after energy reset: ", cls.energy)
+        if after > 0 and before == after:
+            retry = True
+        else:
+            retry = False
 
 if __name__ == '__main__':
     main()
